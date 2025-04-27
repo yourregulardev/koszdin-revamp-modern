@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -34,7 +33,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <img 
-            src="/koszdin-logo.webp" 
+            src="https://koszdin.com/wp-content/uploads/koszdin-logo-svg.webp" 
             alt="Koszdin Law Firm Logo" 
             className="h-12 w-auto"
           />

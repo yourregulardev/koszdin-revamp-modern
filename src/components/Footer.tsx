@@ -12,7 +12,7 @@ const Footer = () => {
             <div>
               <Link to="/">
                 <img 
-                  src="/koszdin-logo.webp" 
+                  src="https://koszdin.com/wp-content/uploads/koszdin-logo-svg.webp"
                   alt="Koszdin Law Firm Logo" 
                   className="h-16 mb-6 brightness-0 invert"
                 />
