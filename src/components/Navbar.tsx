@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -80,9 +81,11 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden lg:block">
-          <Button className="bg-law-blue hover:bg-law-blue/90 text-white">
-            Free Consultation
-          </Button>
+          <Link to="/contact">
+            <Button className="bg-law-blue hover:bg-law-blue/90 text-white">
+              Free Consultation
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Navigation Toggle */}
@@ -94,6 +97,57 @@ const Navbar = () => {
           )}
         </button>
       </div>
+
+      {/* Mobile Navigation Menu */}
+      {isMenuOpen && (
+        <div className="lg:hidden bg-white shadow-lg">
+          <div className="container mx-auto px-4 py-4">
+            <nav className="flex flex-col space-y-4">
+              <Link to="/" className="text-law-blue hover:text-law-gold font-medium transition-colors">
+                Home
+              </Link>
+              <div>
+                <button 
+                  className="flex items-center text-law-blue hover:text-law-gold font-medium transition-colors"
+                  onClick={togglePracticeAreas}
+                >
+                  Practice Areas <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${practiceAreasOpen ? "rotate-180" : ""}`} />
+                </button>
+                {practiceAreasOpen && (
+                  <div className="pl-4 mt-2 space-y-2">
+                    <Link to="/workers-compensation" className="block text-sm text-gray-700 hover:text-law-gold">
+                      Workers' Compensation
+                    </Link>
+                    <Link to="/personal-injury" className="block text-sm text-gray-700 hover:text-law-gold">
+                      Personal Injury
+                    </Link>
+                    <Link to="/social-security-disability" className="block text-sm text-gray-700 hover:text-law-gold">
+                      Social Security Disability
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <Link to="/attorneys" className="text-law-blue hover:text-law-gold font-medium transition-colors">
+                Attorneys
+              </Link>
+              <Link to="/about" className="text-law-blue hover:text-law-gold font-medium transition-colors">
+                About Us
+              </Link>
+              <Link to="/blog" className="text-law-blue hover:text-law-gold font-medium transition-colors">
+                Blog
+              </Link>
+              <Link to="/contact" className="text-law-blue hover:text-law-gold font-medium transition-colors">
+                Contact
+              </Link>
+              <Link to="/contact">
+                <Button className="bg-law-blue hover:bg-law-blue/90 text-white w-full">
+                  Free Consultation
+                </Button>
+              </Link>
+            </nav>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

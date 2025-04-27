@@ -10,11 +10,13 @@ const Footer = () => {
         <div className="py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
-              <img 
-                src="/koszdin-logo.webp" 
-                alt="Koszdin Law Firm Logo" 
-                className="h-16 mb-6"
-              />
+              <Link to="/">
+                <img 
+                  src="/koszdin-logo.webp" 
+                  alt="Koszdin Law Firm Logo" 
+                  className="h-16 mb-6 brightness-0 invert"
+                />
+              </Link>
               <p className="text-white/80 mb-6">
                 Committed to protecting the rights of injured workers and individuals in Los Angeles since 1992.
               </p>
