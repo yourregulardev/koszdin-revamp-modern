@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -11,7 +10,11 @@ const Footer = () => {
         <div className="py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-6">KOSZDIN <span className="text-law-gold">LAW</span></h3>
+              <img 
+                src="/koszdin-logo.webp" 
+                alt="Koszdin Law Firm Logo" 
+                className="h-16 mb-6"
+              />
               <p className="text-white/80 mb-6">
                 Committed to protecting the rights of injured workers and individuals in Los Angeles since 1992.
               </p>

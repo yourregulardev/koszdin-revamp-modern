@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -33,9 +32,11 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center">
-          <span className="text-2xl font-bold text-law-blue">
-            KOSZDIN <span className="text-law-gold">LAW</span>
-          </span>
+          <img 
+            src="/koszdin-logo.webp" 
+            alt="Koszdin Law Firm Logo" 
+            className="h-12 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}
